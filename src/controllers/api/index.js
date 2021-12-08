@@ -1,68 +1,29 @@
-const readFromFile = require("../../util");
-const writeToFile = require("../../util");
+const { readFromFile, writeToFile } = require("../../util");
+// const  = require("../../util");
 
 const getAppNotes = (req, res) => {
-  // const id = req.params.id;
-  // let found;
-  // notes.forEach((i) => {
-  //   if (id == i.id) {
-  //     found = i;
-  //     return res.json(i);
-  //   }
-  // });
-  // return res.json(false);
   // readFromFile and get notes
+  const notes = readFromFile();
   // parse the notes data
+  console.log(notes);
   // send the json response
+  res.json(notes);
 };
 
 const postAppNotes = (req, res) => {
-  // const newNote = req.body;
-  // if (notes.length === 0) {
-  //   newNote.id = 1;
-  // } else {
-  //   newNote.id = notes[notes.length - 1].id + 1;
-  // }
-  // notes.push(newNote);
-  // let jsonNotes = JSON.stringify(notes);
-  // fs.writeFile(
-  //   "./db/db.json",
-  //   (jsonNotes = (err) => {
-  //     if (err) {
-  //       return console.log(err);
-  //     }
-  //     console.log("Success!");
-  //   })
-  // );
-  // res.json(true);
   // get the data from req body
+
+  // console.log(req.body);
+  console.log(req.body.title);
   // read notes from file
   // parse notes
   // push new note to array
   // write to file
+  const notes = readFromFile();
   // send response
 };
 
 const deleteAppNotes = (req, res) => {
-  // const id = req.params.id;
-  // let found;
-  // notes.forEach((i, index) => {
-  //   if (id == i.id) {
-  //     notes.splice(index, 1);
-  //     const notesCopy = notes.slice();
-  //     let jsonNotes = JSON.stringify(notesCopy);
-  //     fs.writeFile(
-  //       "../../../db/db.json",
-  //       (jsonNotes = (err) => {
-  //         if (err) {
-  //           return console.log(err);
-  //         }
-  //         console.log("Success!");
-  //       })
-  //     );
-  //   }
-  // });
-  // res.json(true);
   // get the id of the note to delete
   // read all notes from file
   // filter the notes and remove the note
