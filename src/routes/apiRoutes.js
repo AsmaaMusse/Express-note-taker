@@ -5,8 +5,8 @@ const deleteAppNotes = require("../controllers/api/index");
 const { Routers } = require("express");
 const router = Routers();
 
-router.get("/public/notes", getAppNotes);
-router.post("/public/notes", postAppNotes);
-router.delete("/public/notes:id", deleteAppNotes);
+router.get("/notes", getAppNotes);
+router.post("/notes", postAppNotes);
+router.delete("/notes:id", deleteAppNotes);
 
 module.exports = router;

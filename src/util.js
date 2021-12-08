@@ -10,7 +10,7 @@ const writeToFile = (fileName, data) => {
 
 const readFromFile = (fileName) => {
     const jsonData = fs.readFileSync(
-        path.join(__dirname, "../db/db.json"),"utf8"
+        path.join(__dirname, "../db/db.json"),"utf-8"
     );
 
     return JSON.parse(jsonData);

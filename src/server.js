@@ -13,7 +13,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended:true }));
 app.use(express.json());
-app.use(routes)
+app.use(routes);
 
 
 app.listen(PORT, () => 
