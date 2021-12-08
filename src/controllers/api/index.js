@@ -2,60 +2,72 @@ const readFromFile = require("../../util");
 const writeToFile = require("../../util");
 
 const getAppNotes = (req, res) => {
-  const id = req.params.id;
-  let found;
-  notes.forEach((i) => {
-    if (id == i.id) {
-      found = i;
-      return res.json(i);
-    }
-  });
-  return res.json(false);
+  // const id = req.params.id;
+  // let found;
+  // notes.forEach((i) => {
+  //   if (id == i.id) {
+  //     found = i;
+  //     return res.json(i);
+  //   }
+  // });
+  // return res.json(false);
+  // readFromFile and get notes
+  // parse the notes data
+  // send the json response
 };
 
 const postAppNotes = (req, res) => {
-  const newNote = req.body;
-  if (notes.length === 0) {
-    newNote.id = 1;
-  } else {
-    newNote.id = notes[notes.length - 1].id + 1;
-  }
-
-  notes.push(newNote);
-
-  let jsonNotes = JSON.stringify(notes);
-  fs.writeFile(
-    "./db/db.json",
-    (jsonNotes = (err) => {
-      if (err) {
-        return console.log(err);
-      }
-      console.log("Success!");
-    })
-  );
-  res.json(true);
+  // const newNote = req.body;
+  // if (notes.length === 0) {
+  //   newNote.id = 1;
+  // } else {
+  //   newNote.id = notes[notes.length - 1].id + 1;
+  // }
+  // notes.push(newNote);
+  // let jsonNotes = JSON.stringify(notes);
+  // fs.writeFile(
+  //   "./db/db.json",
+  //   (jsonNotes = (err) => {
+  //     if (err) {
+  //       return console.log(err);
+  //     }
+  //     console.log("Success!");
+  //   })
+  // );
+  // res.json(true);
+  // get the data from req body
+  // read notes from file
+  // parse notes
+  // push new note to array
+  // write to file
+  // send response
 };
 
 const deleteAppNotes = (req, res) => {
-  const id = req.params.id;
-  let found;
-  notes.forEach((i, index) => {
-    if (id == i.id) {
-      notes.splice(index, 1);
-      const notesCopy = notes.slice();
-      let jsonNotes = JSON.stringify(notesCopy);
-      fs.writeFile(
-        "../../../db/db.json",
-        (jsonNotes = (err) => {
-          if (err) {
-            return console.log(err);
-          }
-          console.log("Success!");
-        })
-      );
-    }
-  });
-  res.json(true);
+  // const id = req.params.id;
+  // let found;
+  // notes.forEach((i, index) => {
+  //   if (id == i.id) {
+  //     notes.splice(index, 1);
+  //     const notesCopy = notes.slice();
+  //     let jsonNotes = JSON.stringify(notesCopy);
+  //     fs.writeFile(
+  //       "../../../db/db.json",
+  //       (jsonNotes = (err) => {
+  //         if (err) {
+  //           return console.log(err);
+  //         }
+  //         console.log("Success!");
+  //       })
+  //     );
+  //   }
+  // });
+  // res.json(true);
+  // get the id of the note to delete
+  // read all notes from file
+  // filter the notes and remove the note
+  // write the notes to file
+  // send response
 };
 
 module.exports = {

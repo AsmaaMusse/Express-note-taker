@@ -1,12 +1,15 @@
-const getAppNotes = require("../controllers/api/index");
-const postAppNotes = require("../controllers/api/index");
-const deleteAppNotes = require("../controllers/api/index");
+const { Router } = require("express");
 
-const { Routers } = require("express");
-const router = Routers();
+const {
+  getAppNotes,
+  postAppNotes,
+  deleteAppNotes,
+} = require("../controllers/api");
+
+const router = Router();
 
 router.get("/notes", getAppNotes);
 router.post("/notes", postAppNotes);
-router.delete("/notes:id", deleteAppNotes);
+router.delete("/notes/:id", deleteAppNotes);
 
 module.exports = router;
