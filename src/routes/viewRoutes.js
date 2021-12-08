@@ -5,6 +5,6 @@ const { Router } = require("express");
 const router = Router();
 
 router.get("/", renderHomepage);
-router.get("/:id", renderNotes);
+router.get("/notes", renderNotes);
 
 module.exports = router;
