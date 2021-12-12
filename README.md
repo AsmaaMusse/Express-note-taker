@@ -8,8 +8,12 @@
 
 ## Technologies used:
 
+- HTML
+- CSS
+- Node.js/ Nodemon
+- Express.js
+
 ## Screenshots:
 
-![generated_html.jpg](./src/images/generated_html.jpg)
-![generated_html.jpg](./src/images/generated_html.jpg)
-![generated_html.jpg](./src/images/generated_html.jpg)
+![homepage](public\assets\images\homepage.jpg)
+![notesPage](public\assets\images\notespage.jpg)
