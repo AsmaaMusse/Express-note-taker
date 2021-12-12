@@ -2,14 +2,14 @@ const { Router } = require("express");
 
 const {
   getAppNotes,
-  postAppNotes,
-  deleteAppNotes,
-} = require("../controllers/api");
+  postAppNote,
+  deleteAppNoteById,
+} = require("../controllers/api/notes");
 
 const router = Router();
 
 router.get("/notes", getAppNotes);
-router.post("/notes", postAppNotes);
-router.delete("/notes/:id", deleteAppNotes);
+router.post("/notes", postAppNote);
+router.delete("/notes/:id", deleteAppNoteById);
 
 module.exports = router;
