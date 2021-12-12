@@ -1,14 +1,21 @@
 const fs = require("fs");
-const path = require("path");
 
 const writeToFile = (filePath, data) => {
-  fs.writeFileSync(path.join(__dirname, filePath), JSON.stringify(data));
+  try {
+    fs.writeFileSync(filePath, data);
+  } catch (error) {
+    console.log(error.message);
+  }
 };
 
 const readFromFile = (filePath) => {
-  const content = fs.readFileSync(path.join(__dirname, filePath), "utf-8");
-
-  return JSON.parse(content);
+  try {
+    const content = fs.readFileSync(filePath, "utf8");
+    return JSON.parse(content);
+  } catch (error) {
+    // handle error
+    console.log(error.message);
+  }
 };
 
 module.exports = {

@@ -1,3 +1,6 @@
+const path = require("path");
+const { v4: uuidv4 } = require("uuid");
+
 const { readFromFile, writeToFile } = require("../../util");
 
 const getAppNotes = (req, res) => {
@@ -8,12 +11,13 @@ const getAppNotes = (req, res) => {
 
 const postAppNote = (req, res) => {
   try {
-    // const note = readFromFile();
-    // const { title, text } = req.body;
-    // const id = uuidv4();
-    // const newNote = { title, text, id };
-    // writeToFile("db, [newNote, ...noteData]");
-    // res.json(newNote);
+    const { title, text } = req.body;
+    const id = uuidv4();
+    const newNote = { title, text, id };
+    const filePath = path.join(__dirname, "../../../db/db.json");
+    const notes = readFromFile(filePath);
+    writeToFile(filePath, JSON.stringify([newNote, ...notes]));
+    res.json(newNote);
   } catch (error) {
     console.error(error.message);
     res.status(500).json({ error: "Error!:postAppNotes" });
@@ -22,10 +26,13 @@ const postAppNote = (req, res) => {
 
 const deleteAppNoteById = (req, res) => {
   try {
-    // const { id } = req.params;
-    // const deleteNote = readFromFile().filter((note) => note.id !== id);
-    // writeToFile("db", deleteNote);
-    // res.status(200).json({ message: "your note has been delete" });
+    const { id } = req.params;
+    const filePath = path.join(__dirname, "../../../db/db.json");
+    const filteredNotes = readFromFile(filePath).filter(
+      (note) => note.id !== id
+    );
+    writeToFile(filePath, JSON.stringify(filteredNotes));
+    res.status(200).json({ message: "your note has been delete" });
   } catch (error) {
     console.error(error.message);
     res.status(500).json({ error: "Error!:deleteAppNotes" });
