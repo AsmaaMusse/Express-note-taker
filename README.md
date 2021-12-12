@@ -55,5 +55,5 @@ Delete targeting the notes id using the Postman app.
 
 ## Screenshots:
 
-![homepage](public\assets\images\homepage.jpg)
-![notesPage](public\assets\images\notespage.jpg)
+![homepage](public/assets/images/homepage.jpg)
+![notesPage](public/assets/images/notespage.jpg)
