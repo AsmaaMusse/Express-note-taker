@@ -1,16 +1,9 @@
-const { v4: uuidv4 } = require("uuid");
 const { readFromFile, writeToFile } = require("../../util");
-// const  = require("../../util");
 
 const getAppNotes = (req, res) => {
-  try {
-    // const notes = readFromFile();
-    // console.log(notes);
-    // res.json(notes);
-  } catch (error) {
-    console.error(error.message);
-    res.status(500).json({ error: "Error!:getAppNotes" });
-  }
+  const filePath = path.join(__dirname, "../../../db/db.json");
+  const notes = readFromFile(filePath);
+  res.json(notes);
 };
 
 const postAppNote = (req, res) => {
@@ -18,7 +11,6 @@ const postAppNote = (req, res) => {
     // const note = readFromFile();
     // const { title, text } = req.body;
     // const id = uuidv4();
-
     // const newNote = { title, text, id };
     // writeToFile("db, [newNote, ...noteData]");
     // res.json(newNote);

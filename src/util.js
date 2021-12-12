@@ -1,20 +1,14 @@
 const fs = require("fs");
 const path = require("path");
 
-const writeToFile = (data) => {
-  fs.writeFileSync(
-    path.join(__dirname, "../db/db.json.json"),
-    JSON.stringify(data)
-  );
+const writeToFile = (filePath, data) => {
+  fs.writeFileSync(path.join(__dirname, filePath), JSON.stringify(data));
 };
 
-const readFromFile = () => {
-  const jsonData = fs.readFileSync(
-    path.join(__dirname, "../db/db.json"),
-    "utf-8"
-  );
+const readFromFile = (filePath) => {
+  const content = fs.readFileSync(path.join(__dirname, filePath), "utf-8");
 
-  return JSON.parse(jsonData);
+  return JSON.parse(content);
 };
 
 module.exports = {
