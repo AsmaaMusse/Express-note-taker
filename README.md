@@ -57,3 +57,7 @@ Delete targeting the notes id using the Postman app.
 
 ![homepage](public/assets/images/homepage.jpg)
 ![notesPage](public/assets/images/notespage.jpg)
+
+## Contribute
+
+To contribute or ask questions, please <a href="https://mail.google.com/mail/u/0/?tf=cm&to=asmaamusse03@gmail.com&cc&bcc&su&body&fs=1">Email</a> here
