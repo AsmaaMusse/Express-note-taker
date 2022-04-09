@@ -12,7 +12,7 @@ For this project, I created note taker using Express and node.js which helps the
 - [Screenshots](#screenshots)
 - [Contribute](#contribute)
 
-## links:
+## Links:
 
 - Heroku: https://sheltered-stream-18510.herokuapp.com/
 - Github repo: https://github.com/AsmaaMusse/note-taker/tree/dev
