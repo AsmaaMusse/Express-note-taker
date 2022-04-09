@@ -4,7 +4,7 @@
 
 For this project, I created note taker using Express and node.js which helps the user stay organized by saving and deleting notes when needed.
 
-Table of contents:
+## Table of contents:
 - [Links](#links)
 - [Usage](#usage)
 - [Endponits](#endpoints)
