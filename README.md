@@ -4,6 +4,14 @@
 
 For this project, I created note taker using Express and node.js which helps the user stay organized by saving and deleting notes when needed.
 
+Table of contents:
+- [Links](#links)
+- [Usage](#usage)
+- [Endponits](#endpoints)
+- [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
+- [Contribute](#contribute)
+
 ## links:
 
 - Heroku: https://sheltered-stream-18510.herokuapp.com/
